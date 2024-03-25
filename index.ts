@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 // creating calculatorusing inquirer
 
 import inquirer from "inquirer";
@@ -8,7 +9,7 @@ let answers = await inquirer.prompt([
     message : "Select one Operator to performe Operations",
     type: "list",
     name: "operator",
-    choices: ["Addition", "Subtraction", "Multiplication", "Division"],
+    choices: ["Addition", "Subtraction", "Multiplication", "Division", "Modulus"],
 }
 ]);
 
@@ -25,5 +26,8 @@ else if(answers.operator === "Multiplication"){
 } 
 else if(answers.operator === "Division"){
     console.log(answers.firstnumber / answers.secondnumber);
-}; 
+} else if(answers.operator === "Modulus"){
+    console.log(answers.firstnumber % answers.secondnumber);
+};
+
 
