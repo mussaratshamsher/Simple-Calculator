@@ -8,7 +8,7 @@ let answers = await inquirer.prompt([
         message: "Select one Operator to performe Operations",
         type: "list",
         name: "operator",
-        choices: ["Addition", "Subtraction", "Multiplication", "Division", "Modulus", "Exponentiation()"],
+        choices: ["Addition", "Subtraction", "Multiplication", "Division", "Modulus"],
     }
 ]);
 // Conditional statements If-Else for performing operations
@@ -26,8 +26,5 @@ else if (answers.operator === "Division") {
 }
 else if (answers.operator === "Modulus") {
     console.log(answers.firstnumber % answers.secondnumber);
-}
-else if (answers.operator === "Exponentiation()") {
-    (answers.firstnumber ** answers.secondnumber);
 }
 ;
